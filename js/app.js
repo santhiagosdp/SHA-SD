@@ -14,7 +14,7 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
             var shaObj = new jsSHA("SHA-256", "TEXT");
             shaObj.update(tx);
             console.log(shaObj.getHash("HEX")); 
-            document.getElementById('result').innerHTML = shaObj.getHash("HEX");
+            document.getElementById('result').innerHTML =shaObj.getHash("HEX");
         }
         reader.readAsArrayBuffer(file);
     }
