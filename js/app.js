@@ -27,9 +27,11 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
     alert('Arquivo não suportado no navegador');
 }
 // Lendo arquivo 2
-if (window.File && window.FileReader && window.FileList && window.Blob) {
+if (window.File && window.FileReader && window.FileList && window.Blob) 
+{
     var input = document.getElementById('file2');
-    input.onchange = function() {
+    input.onchange = function() 
+    	{
         var file = this.files[0];
         var reader = new FileReader();
         reader.onload = function(e) {
@@ -44,6 +46,18 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
         }
         reader.readAsArrayBuffer(file);
     }
-} else {
+} else 
+{
     alert('Arquivo não suportado no navegador');
 }
+function verif() 
+{
+	if (document.getElementById('result2').innerHTML == document.getElementById('result').innerHTML)
+	{
+		document.getElementById('result3').innerHTML= "HASH's iguais! ";
+	}
+	else
+	{
+		document.getElementById('result3').innerHTML="HASH's diferentes! ";
+	}
+} 
